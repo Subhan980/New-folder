@@ -22,11 +22,11 @@
     .logo {
       font-size: 32px;
       font-weight: bold;
-      color: #e50914;
+      color: #0b153d;
     }
 
     .sign-in a { float: right;
-      background-color: #e50914;
+      background-color: #0a1c78;
       color: white;
       padding: 8px 16px;
       border-radius: 4px;
