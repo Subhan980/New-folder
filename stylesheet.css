@@ -1,0 +1,367 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+ 
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+ 
+    .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(0, 0, 0, 0.); /* more transparent */
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  color: red;
+}
+ 
+    .sign-in a { float: right;
+      background-color:red;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+ 
+    .hero {
+      height: 90vh;
+      background: url('6.webp') no-repeat center center/cover;
+      position: relative;
+    }
+ 
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+ 
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 100px 20px;
+      text-align: center;
+    }
+ 
+    .hero-content h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+ 
+    .hero-content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+ 
+    .hero-content p {
+      margin-bottom: 20px;
+    }
+ 
+    .email-form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+ 
+    .email-form input {
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      width: 300px;
+    }
+ 
+    .email-form button {
+      background-color: #e50914;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+ #services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.box {
+  position: relative; 
+  background-color: #170c3f;
+  width: 250px;
+  padding: 20px;
+  padding-bottom: 60px; 
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  height: 250px;
+}
+
+.box h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.box p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 50px;
+  
+}
+
+    .footer {
+      background-color: #141414;
+      padding: 40px 60px;
+      color: #999;
+    }
+ 
+    .footer a {
+      color: #999;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+ 
+    .footer a:hover {
+      text-decoration: underline;
+    }
+ 
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    } body {
+      background-color: #000;
+      color: #999;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    
+ 
+    .footer a {
+      color: #999;
+      text-decoration: none;
+      display: block;
+      margin: 8px 0;
+      font-size: 14px;
+    }
+ 
+    .footer a:hover {
+      text-decoration: underline;
+    }
+ 
+    
+    .language-selector {
+      margin-top: 30px;
+      position: relative;
+      width: 160px;
+    }
+ 
+    #lang-toggle {
+      display: none;
+    }
+ 
+    .lang-label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #333;
+      border-radius: 4px;
+      padding: 10px 12px;
+      color: #999;
+      font-size: 14px;
+      cursor: pointer;
+      background-color: transparent;
+    }
+ 
+    .lang-label i {
+      margin-left: 8px;
+    }
+ 
+    .lang-options {
+      display: none;
+      position: absolute;
+      background-color: #141414;
+      top: 42px;
+      left: 0;
+      width: 100%;
+      border: 1px solid #333;
+      border-radius: 4px;
+      z-index: 10;
+    }
+ 
+    .lang-options a {
+      color: #999;
+      padding: 10px 12px;
+      text-decoration: none;
+      display: block;
+    }
+ 
+    .lang-options a:hover {
+      background-color: #333;
+    }
+ 
+    
+    #lang-toggle:checked + .lang-label + .lang-options {
+      display: block;
+    }
+ 
+    .footer-bottom {
+      margin-top: 40px;
+      font-size: 13px;
+    }
+      
+ 
+.thumbnail {
+  width: 200px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+ 
+.thumbnail:hover {
+  opacity: 0.8;
+}
+ 
+/* Popup styles remain same */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 999;
+  text-align: center;
+  padding-top: 60px;
+}
+ 
+.popup:target {
+  display: block;
+}
+ 
+.popup img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+ 
+.popup a {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 35px;
+  text-decoration: none;
+  font-weight: bold;
+}
+ 
+.popup a:hover {
+  color: red;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+}
+
+/* FAQ Section Centered */
+.faq-section {
+  max-width: 800px;
+  width: 90%;
+  margin: 50px auto; /* Auto margin centers it horizontally */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Title Styling */
+.faq-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* FAQ Item Container */
+.faq-item {
+  background-color: #ccc;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* FAQ Question */
+.faq-question {
+  padding: 20px;
+  cursor: pointer;
+  font-size: 1.2rem; /* Fixed typo */
+  position: relative;
+  background-color: #ddd;
+}
+
+/* Plus Icon */
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Answer Container */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background-color: #333;
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* Answer Text */
+.faq-answer p {
+  margin: 0;
+  padding: 20px 0;
+}
+
+/* Active Item (when clicked) */
+.faq-item.active .faq-answer {
+  max-height: 500px;
+}
+
+/* Change Plus to Close Icon */
+.faq-item.active .faq-question::after {
+  content: '×';
+}
