@@ -15,7 +15,7 @@ body {
 
 
 .navbar {
-
+  position: fixed;
   top: 0;
   width: 100%;
   background-color: #ffffff;
@@ -79,6 +79,184 @@ font-size: 1rem;
     justify-content: center;
     margin-top: 20px;
 }
+#services {
+  display: flex;            
+  justify-content: space-around; 
+  flex-wrap: wrap;      
+  gap: 20px;               
+  padding: 20px;
+}
+
+#services .box {
+  width: 220px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  color: black;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: moveUp 1s ease-in-out forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes moveUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.box {border-radius:  6px solid;
+  position: relative; 
+  width: 250px;
+  padding: 20px;
+  padding-bottom: 60px; 
+  border-radius: 10px;
+ 
+  height: 250px;
+}
+
+.box h2 {
+  font-size: 18px;
+  margin: 0 0 10px;
+}
+
+.box p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.see-all{ text-align: center;
+  margin: 20px;}
+
+
+  #box {  border-radius: 30px;
+    height: 550px;
+    padding: 40px 20px;
+    background-color: pink;
+    border-top: 2px solid #eee;
+    text-align: right;
+    text-decoration: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    
+
+  }
+  #box h1{ text-align: center;
+    font: size 34px;
+  font-family: sans-serif;
+    margin-bottom: 20px;
+    color:black;
+    }
+#box p{text-align: left;
+  font-size: 30px;
+    color: black;
+    font-family:open sans;
+
+}
+#box iframe{
+ border-radius: 30px;
+position: relative;
+top: -10px;
+left: -70px;
+
+}
+#box #herf a{
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  max-width: 600px; 
+  margin: auto;   
+}
+
+.container .box { 
+  width: 220px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.container .box h3{
+  color: black;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+  color: white;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.faq-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.faq-item {border: 2px solid red;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.2rem;
+  color: #303030;
+  
+}
+
+.faq-question::after {
+  content: '+';
+  position: absolute;
+  right: 20px;
+  font-size: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #444;
+  color: #fff;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding: 20px;
+  margin: 0;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 300px;
+}
+
+.faq-item.active .faq-question::after {
+  content: '';
+}
+
+
 </style>
 </head>
 <body>
@@ -106,7 +284,145 @@ font-size: 1rem;
  
     </div>
      </div>
+       <h1 style="text-align:center; margin-top: 30px;">Features on</h1>
+<br>
 </section>
+<section id="services">
+      <div class="box">
+        <br>
+        <img src="images (1).png" alt="" width="80px" height="80px">
+        <p>“Homeowners are using web renovation applications to cut middleman fees”</p>
+      </div>
+      <div class="box">
+       <img src="44.png" alt="" width="80px" height="80px">
+        <br>
+        <p>“At every step, homeowners are informed of the price they have to pay for their renovation”
+</p>
+      </div>
+      <div class="box">
+        <img src="images.png" alt="" width="80px" height="80px">
+        <br>
+        <p>“为屋主消除装修噩梦 'Eliminate Renovation Nightmares for Homeowners'”</p>
+      </div>
+      <div class="box">
+         <img src="gn8bfhijddp4k2nyxoii.webp" alt="" width="80px" height="80px">
+        <br>
+        <p>“Tech platform allows users to create 3D designs and receive quotations”</p>
+      </div>
+    </section>
+
+    <div class="see-all">
+       <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">see all</a>
+    </div>
+    <section id="box">
+      <h1>Singapore's No.1 RenoTech company</h1>
+      <br>
+  
+<iframe  width="700px" height="400px" 
+        src="https://www.youtube.com/embed/6JTs2YMHUjE?autoplay=1&mute=1"
+        style="float: left; margin-right: 10px;" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+</iframe>
+<p>Hassle of finding right design and quality workmanship for a low price is a thing of the past.</p>
+<br>
+<br>
+<p>Homeez is a renovation platform that connects you, the homeowners, to direct suppliers.</p>
+       <div id="href">
+<a href="http://www.google.com" target="_blank" rel="noopener noreferrer">learn about us </a>
+
+       </div>
+
+
+
+
+
+    </section>
+  <section class="container">
+      <div class="box">
+    
+        <h3>Preferred payment partners</h3>
+        <br>
+        <br>
+        <img src="PIE+Transparent+-+Horizontal (1).png" alt="" width="150px" height="120px">
+        
+      </div>
+      <div class="box">
+        <h3>Home Insurance partner</h3>
+        <br>
+       
+       <img src="44.png" alt="" width="150px" height="120px">
+        <br>
+       
+
+      </div>
+      <div class="box">
+        <h3>A Member of</h3>
+        <br>
+        <img src="images.png" alt="" width="150px" height="120px">
+        <br>
+        
+      </div>
+      <div class="box">
+        <h3>Education Partner</h3>
+         <img src="00.png" alt="" width="150px" height="120px">
+        <br>
+        
+    </section>
+
+
+  
+    <section class="faq-section">
+    <h2 class="faq-title">Frequently Asked Questions</h2>
+
+    
+    <div class="faq-item">
+      <div class="faq-question">what is Homeez?</div>
+      <div class="faq-answer">
+        <p>Homeez is a platform that connects homeowners directly to suppliers in their entire renovation process. Homeez uses the latest technology to offer an end-to-end digitalised solution - beginning from spatial planning using DIY tools like Design Now, all the way to managing the process using our unique Time Schedule tool.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">what is the quatation Doctor</div>
+      <div class="faq-answer">
+        <p>At 0% mark-ups, Homeez is committed to offer homeowners only the best and true prices available in the market so you can save time when comparing between quotations from various interior design firms. In the (unlikely) event that you manage to get a lower quote than us, send it to us and we’ll be able to match it or refund you within 7 days. Refer to our Terms and Conditions for more details!.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">what is the lowest price</div>
+      <div class="faq-answer">
+        <p>Quotation Doctor is created specifically to help homeowners review multiple quotations to narrow down to a quotation with the best prices available in the market. Once you upload the quotations, you can look forward to receiving news from Quotation Doctor within 5 days!</p>
+      </div>
+    </div>
+     <div class="faq-item">
+<div class="faq-question">Are you 3D design</div>
+      <div class="faq-answer">
+        <p>Not at all. It is part of Homeez’s service to provide homeowners with inspiration for their dream home. Which is easily viewable through the 3D function of our design now</p>
+      </div>  </div>
+    </div>
+    <div class="faq-item">
+    <div class="faq-question">interior Designer</div>
+      <div class="faq-answer">
+        <p>Yes, you may continue to engage an Interior Designer for the coordination of works while using the renovation contractors listed on the Homeez panel. However, you may wish to speak to your Interior Designer should there be any co-ordination fees involved.</p>
+      </div>  </div>
+    </div>
+   <div class="faq-item">
+    <div class="faq-question">who will bi laising with the contactor renotation?</div>
+      <div class="faq-answer">
+        <p>Homeowners are encouraged to participate in the creation of their dream home. After all, that’s what we created Homeez for! But do not fret as a Homeez representative is assigned to every homeowner to give you the assurance and confidence to execute your renovation process smoothly at every step of the way.</p>
+      </div> </div>
+    </div>
+
+  </section>
+
+
+
+
+</footer>
+
+
 
 </body>
 </html>
