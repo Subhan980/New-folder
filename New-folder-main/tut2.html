@@ -1,263 +1,8 @@
 <html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet2.css">
   <title>Homeez</title>
-  <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-}
-
-.logo {
-  color: rgb(4, 11, 107);
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-gap: 30px;
-font-size: 1rem;
-}
-
-.nav-links li a {
-  color: rgb(0, 0, 0);
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s;
-}
-
-.nav-links li a:hover {
-  color: #ff0808;
-}
-
-.nav-buttons a {
-  margin-left: 20px;
-  
-  text-decoration: none;
-  background-color:rgba(235, 11, 11, 0.781);
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: background-color 0.3s;
-}
-
-.nav-buttons a:hover {
-  background-color: #5a5abf;
-}
-.hero{
-    background: linear-gradient(to right, rgb(238, 201, 201) 50%,rgba(240, 152, 152, 0.466) 50%);
-    height: 700px;
- 
-}
-.hero h1{
-   
-   padding: 300px 0 0 300px;
-}
-
-.hero .nav-buttons{
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-#services {
-  display: flex;            
-  justify-content: space-around; 
-  flex-wrap: wrap;      
-  gap: 20px;               
-  padding: 20px;
-}
-
-#services .box {
-  width: 220px;
-  padding: 10px;
-  background-color: #f4f4f4;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  color: black;
-  opacity: 0;
-  transform: translateY(100px);
-  animation: moveUp 1s ease-in-out forwards;
-  animation-delay: var(--delay, 0s);
-}
-
-@keyframes moveUp {
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.box {border-radius:  6px solid;
-  position: relative; 
-  width: 250px;
-  padding: 20px;
-  padding-bottom: 60px; 
-  border-radius: 10px;
- 
-  height: 250px;
-}
-
-.box h2 {
-  font-size: 18px;
-  margin: 0 0 10px;
-}
-
-.box p {
-  font-size: 14px;
-  margin: 0;
-}
-
-.see-all{ text-align: center;
-  margin: 20px;}
-
-
-  #box {  border-radius: 30px;
-    height: 550px;
-    padding: 40px 20px;
-    background-color: pink;
-    border-top: 2px solid #eee;
-    text-align: right;
-    text-decoration: center;
-    margin-right: 100px;
-    margin-left: 100px;
-    
-
-  }
-  #box h1{ text-align: center;
-    font: size 34px;
-  font-family: sans-serif;
-    margin-bottom: 20px;
-    color:black;
-    }
-#box p{text-align: left;
-  font-size: 30px;
-    color: black;
-    font-family:open sans;
-
-}
-#box iframe{
- border-radius: 30px;
-position: relative;
-top: -10px;
-left: -70px;
-
-}
-#box #herf a{
-  text-align: center;
-}
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-  padding: 20px;
-  background-color: #ffffff;
-  max-width: 600px; 
-  margin: auto;   
-}
-
-.container .box { 
-  width: 220px;
-  padding: 10px;
-  background-color: #f4f4f4;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.container .box h3{
-  color: black;
-}
-
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
- 
-  color: white;
-}
-
-.faq-section {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 20px;
-}
-
-.faq-title {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.faq-item {border: 2px solid red;
-  background-color: white;
-  margin-bottom: 10px;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.faq-question {
-  padding: 20px;
-  cursor: pointer;
-  position: relative;
-  font-size: 1.2rem;
-  color: #303030;
-  
-}
-
-.faq-question::after {
-  content: '+';
-  position: absolute;
-  right: 20px;
-  font-size: 2rem;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  background-color: #444;
-  color: #fff;
-  transition: max-height 0.4s ease;
-}
-
-.faq-answer p {
-  padding: 20px;
-  margin: 0;
-}
-
-.faq-item.active .faq-answer {
-  max-height: 300px;
-}
-
-.faq-item.active .faq-question::after {
-  content: '';
-}
-
-
-</style>
 </head>
 <body>
 <header class="navbar">
@@ -269,7 +14,6 @@ body {
       <li><a href="#contact">Resources</a></li>
     </ul>
     <div class="nav-buttons">
-     
       <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Design</a>
       <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Log In</a>
     </div>
@@ -330,7 +74,7 @@ body {
 <br>
 <p>Homeez is a renovation platform that connects you, the homeowners, to direct suppliers.</p>
        <div id="href">
-<a href="http://www.google.com" target="_blank" rel="noopener noreferrer">learn about us </a>
+ <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">learn about us </a>
 
        </div>
 
@@ -338,7 +82,86 @@ body {
 
 
 
+
+
+
+
     </section>
+
+
+
+  <section class="renovation-section">
+    <h2>3 Steps to Renovation</h2>
+    <p class="step-description">
+      Share the ideas for your dream home through our Design Now program and instantly get a quote with your designs!
+    </p>
+    
+    <div class="devices">
+      <img src="images (1).jpeg" alt="Woman with phone">
+      <img src="3495775.png" alt="Mobile UI">
+      <img src="laptop-cartoon-clip-art-png-favpng-LeUzsm6SfxqiRv3zXuKm4YFzZ.jpg" alt="Laptop UI">
+      
+    </div>
+    
+    <button class="design-button">Design Now</button>
+  </section>
+  <section class="project-showcase">
+  <h2>Get inspiration from our works</h2>
+  <div class="carousel">
+    <div class="tabs">
+      <button class="tab active">DREAM HOME</button>
+  
+    </div>
+    <div class="carousel-content">
+      <div class="image">
+        <img src="706-front-2.webp" alt="Dream Home" />
+      </div>
+      <div class="details">
+        <h3>Industrial Home at Ubi</h3>
+        <p><strong>Style:</strong> Industrial</p>
+        <p><strong>Property Type:</strong> 4 Room BTO HDB</p>
+        <p><strong>Size:</strong> 870 sqft</p>
+        <p><strong>Scope of work:</strong></p>
+        <div class="scope-icons">
+        
+        <p class="cost-title">Renovation cost:</p>
+        <p class="cost">$44,000</p>
+      </div>
+    </div>
+    <button class="see-all">SEE ALL PROJECTS</button>
+  </div>
+</section>
+<section class="testimonial-section">
+  <h2>Hear from our homeowners</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-box">
+      <h4><strong>Gina Lee</strong></h4>
+      <div class="stars">★★★★★</div>
+      <p>
+        Had an overall positive experience with homeez, renovated my living room and bathroom and it was really nice! Really appreciate the work homeez, thank you!
+      </p>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <div class="image-grid">
+
+     
+      <img src="GA_ATL_PITTSBURGH_82772_161_RT-2_RT-5f7457.webp" alt="img3">
+      <img src="images (3).jpeg" alt="img4">
+      <img src="images (4).jpeg" alt="img5">
+      <img src="images (5).jpeg" alt="img6">
+    </div>
+  </div>
+</section>
+
+
+
+
   <section class="container">
       <div class="box">
     
@@ -348,6 +171,9 @@ body {
         <img src="PIE+Transparent+-+Horizontal (1).png" alt="" width="150px" height="120px">
         
       </div>
+
+
+      
       <div class="box">
         <h3>Home Insurance partner</h3>
         <br>
@@ -415,12 +241,19 @@ body {
       </div> </div>
     </div>
 
+
+   
   </section>
+  <div id="head">
+    <h1>Start designing your dream home today!</h1>
+    <div id="nav-buttons">
+     
+      <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Design</a>
+ 
+    </div>
+   </div>
 
 
-
-
-</footer>
 
 
 
